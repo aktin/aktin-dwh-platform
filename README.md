@@ -1,25 +1,11 @@
-# {{PROJECT_NAME}}
+# aktin-dwh-platform
 
-<!-- template:start -->
 
-> **This repo was generated from the `java-starter` template.** Run the one-time setup before anything else:
->
-> ```sh
-> ./scripts/init.sh  # fills in name, slug, author, owner, groupId; strips this banner; self-deletes
-> lefthook install   # installs the git hooks (needs the lefthook binary)
-> ```
->
-> `init.sh` reads your `git remote` to guess the slug, prompts for the rest, rewrites the placeholders (`{{PROJECT_NAME}}`, `{{REPO_SLUG}}`, `{{DESCRIPTION}}`, `{{AUTHOR}}`, `{{OWNER}}`) across the repo, and moves the `org.example.app` package to your groupId. After it runs, review the diff, commit, then do the one-time GitHub steps under [Repository settings](#repository-settings).
-
-<!-- template:end -->
-
-[![CI](https://github.com/{{REPO_SLUG}}/actions/workflows/ci.yml/badge.svg)](https://github.com/{{REPO_SLUG}}/actions/workflows/ci.yml)
-[![CodeQL](https://github.com/{{REPO_SLUG}}/actions/workflows/codeql.yml/badge.svg)](https://github.com/{{REPO_SLUG}}/actions/workflows/codeql.yml)
-[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/{{REPO_SLUG}}/badge)](https://securityscorecards.dev/viewer/?uri=github.com/{{REPO_SLUG}})
+[![CI](https://github.com/aktin/aktin-dwh-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/aktin/aktin-dwh-platform/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/aktin/aktin-dwh-platform/actions/workflows/codeql.yml/badge.svg)](https://github.com/aktin/aktin-dwh-platform/actions/workflows/codeql.yml)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/aktin/aktin-dwh-platform/badge)](https://securityscorecards.dev/viewer/?uri=github.com/aktin/aktin-dwh-platform)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](./LICENSE)
-[![Release](https://img.shields.io/github/v/release/{{REPO_SLUG}})](https://github.com/{{REPO_SLUG}}/releases)
-
-# {{DESCRIPTION}}
+[![Release](https://img.shields.io/github/v/release/aktin/aktin-dwh-platform)](https://github.com/aktin/aktin-dwh-platform/releases)
 
 ## Stack
 

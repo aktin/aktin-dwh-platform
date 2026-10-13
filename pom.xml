@@ -10,17 +10,18 @@
     <relativePath/>
   </parent>
 
-  <groupId>org.example</groupId>
-  <artifactId>java-starter</artifactId>
+  <groupId>org.aktin.dwh</groupId>
+  <artifactId>aktin-dwh-platform</artifactId>
   <version>${revision}</version>
   <packaging>pom</packaging>
 
-  <name>java-starter</name>
-  <description>{{DESCRIPTION}}</description>
+  <name>aktin-dwh-platform</name>
+  <description>Modular data warehouse platform for clinical data on i2b2. A small, stable platform service runs independent modules as containers and provides lifecycle management, database schemas, filesystem, event bus, OIDC identity (Keycloak) and a web frontend. On-premise, one Compose project per DWH.</description>
 
   <developers>
     <developer>
-      <name>{{AUTHOR}}</name>
+      <name>Alexander Kombeiz</name>
+      <email>akombeiz@ukaachen.de</email>
     </developer>
   </developers>
 
