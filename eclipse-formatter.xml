@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Spotless formatter settings. Only deviations from the Eclipse JDT defaults:
+     2-space indent and 150 columns, matching .editorconfig and the sibling starters. -->
+<profiles version="23">
+  <profile kind="CodeFormatterProfile" name="starter" version="23">
+    <setting id="org.eclipse.jdt.core.formatter.tabulation.char" value="space"/>
+    <setting id="org.eclipse.jdt.core.formatter.tabulation.size" value="2"/>
+    <setting id="org.eclipse.jdt.core.formatter.indentation.size" value="2"/>
+    <setting id="org.eclipse.jdt.core.formatter.lineSplit" value="150"/>
+    <setting id="org.eclipse.jdt.core.formatter.comment.line_length" value="150"/>
+  </profile>
+</profiles>
