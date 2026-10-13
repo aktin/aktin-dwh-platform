@@ -2,6 +2,8 @@
 
 
 [![CI](https://github.com/aktin/aktin-dwh-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/aktin/aktin-dwh-platform/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/aktin/aktin-dwh-platform/actions/workflows/codeql.yml/badge.svg)](https://github.com/aktin/aktin-dwh-platform/actions/workflows/codeql.yml)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/aktin/aktin-dwh-platform/badge)](https://securityscorecards.dev/viewer/?uri=github.com/aktin/aktin-dwh-platform)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](./LICENSE)
 [![Release](https://img.shields.io/github/v/release/aktin/aktin-dwh-platform)](https://github.com/aktin/aktin-dwh-platform/releases)
 
@@ -76,9 +78,3 @@ eclipse-formatter.xml  Spotless formatter settings (2-space indent, 150 columns)
 SECURITY.md             how to report a vulnerability
 scripts/init.sh        one-time template initializer (removed after first run)
 ```
-
-## Parked until release 1.0
-
-The repository stays private until release 1.0 and the `aktin` organisation is on the GitHub Free plan. Code scanning, Scorecard, dependency review and artifact attestations are not available for private repositories on that plan, so the `codeql.yml`, `scorecard.yml` and `dependency-review.yml` workflows, the attestation steps in `release.yml` and the matching README badges were removed in commit `37fa8b00752d`.
-
-When the repository goes public, run `git revert 37fa8b00752d`, then enable secret scanning, push protection and private vulnerability reporting under Settings, Security and quality. Keep code scanning "Default setup" off, `codeql.yml` covers it.
