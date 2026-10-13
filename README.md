@@ -47,7 +47,6 @@ Generating a repo from a template copies files and branches only, never settings
 | Code scanning                     | Runs from `codeql.yml`, keep "Default setup" off in Settings → Code security                                                         | Default setup conflicts with the advanced workflow, private repos need GitHub Advanced Security for the alerts to appear             |
 | Secret scanning + push protection | Settings → Code security, on by default for public repos                                                                             | Blocks committed credentials                                                                                                         |
 | Dependabot alerts                 | Settings → Code security, enable Dependabot alerts and security updates                                                              | `dependabot.yml` only schedules version updates, the vulnerability alerts and auto-fix PRs are separate toggles                      |
-| Private vulnerability reporting   | Settings → Code security, enable                                                                                                     | Gives researchers a private channel instead of a public issue                                                                        |
 | Template toggle                   | Leave "Template repository" off if this repo was made from the template                                                              | Prevents re-templating                                                                                                               |
 | Housekeeping                      | Settings → General. Set description and topics, untick Wikis and Projects if unused                                                  | Discoverability, fewer places for stale content                                                                                      |
 
@@ -115,6 +114,5 @@ app/                   Spring Boot application module (package renamed by init.s
 .github/workflows/     CI, CodeQL, Scorecard, dependency-review, release
 checkstyle.xml         correctness rules (formatting lives in Spotless)
 eclipse-formatter.xml  Spotless formatter settings (2-space indent, 150 columns)
-SECURITY.md             how to report a vulnerability
 scripts/init.sh        one-time template initializer (removed after first run)
 ```
