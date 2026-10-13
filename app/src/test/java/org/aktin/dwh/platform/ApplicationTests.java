@@ -1,4 +1,4 @@
-package org.example.app;
+package org.aktin.dwh.platform;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
