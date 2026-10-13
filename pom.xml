@@ -33,7 +33,7 @@
     <revision>0.0.0</revision>
     <!-- Fixed timestamp so repeated builds of the same commit produce identical jars. -->
     <project.build.outputTimestamp>2026-10-13T00:00:00Z</project.build.outputTimestamp>
-    <java.version>21</java.version>
+    <java.version>25</java.version>
     <spotless.version>3.8.0</spotless.version>
     <maven-checkstyle-plugin.version>3.6.0</maven-checkstyle-plugin.version>
     <checkstyle.version>13.8.0</checkstyle.version>
@@ -43,7 +43,7 @@
 
   <build>
     <plugins>
-      <!-- Fails the build on Java older than 21 or Maven older than 3.9. -->
+      <!-- Fails the build on Java older than 25 or Maven older than 3.9. -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
@@ -57,7 +57,7 @@
             <configuration>
               <rules>
                 <requireJavaVersion>
-                  <version>[21,)</version>
+                  <version>[25,)</version>
                 </requireJavaVersion>
                 <requireMavenVersion>
                   <version>[3.9,)</version>
