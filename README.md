@@ -2,8 +2,6 @@
 
 
 [![CI](https://github.com/aktin/aktin-dwh-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/aktin/aktin-dwh-platform/actions/workflows/ci.yml)
-[![CodeQL](https://github.com/aktin/aktin-dwh-platform/actions/workflows/codeql.yml/badge.svg)](https://github.com/aktin/aktin-dwh-platform/actions/workflows/codeql.yml)
-[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/aktin/aktin-dwh-platform/badge)](https://securityscorecards.dev/viewer/?uri=github.com/aktin/aktin-dwh-platform)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](./LICENSE)
 [![Release](https://img.shields.io/github/v/release/aktin/aktin-dwh-platform)](https://github.com/aktin/aktin-dwh-platform/releases)
 
