@@ -22,7 +22,7 @@ pre-commit:
     gitleaks:
       run: |
         if command -v gitleaks >/dev/null 2>&1; then
-          gitleaks git --pre-commit --redact --staged --verbose
+          gitleaks protect --staged --redact --verbose
         else
           echo "gitleaks not installed, skipping secret scan"
         fi
