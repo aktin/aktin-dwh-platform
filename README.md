@@ -76,7 +76,7 @@ Branch ruleset `default`:
 | Signed commits           | Every commit on `main` is signed. Squash merges are signed by GitHub                                                           |
 | No force push, no delete | History on `main` is append-only                                                                                              |
 
-Organisation admins can bypass every rule. Other branches have no rules.
+Approvals come from people. GitHub Actions cannot create or approve pull requests, auto-merge is off, and no app or bot is on the bypass list. Organisation admins can bypass every rule. Other branches have no rules.
 
 ### Gates on tags `v*`
 
