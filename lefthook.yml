@@ -19,6 +19,12 @@ pre-commit:
     lint:
       glob: "*.java"
       run: ./mvnw -q checkstyle:check -Dcheckstyle.includes="$(for f in {staged_files}; do printf '**/%s,' "$(basename "$f")"; done | sed 's/,$//')"
+    hadolint:
+      glob: "**/Dockerfile"
+      run: hadolint --failure-threshold error {staged_files}
+    shellcheck:
+      glob: "*.sh"
+      run: shellcheck -S warning {staged_files}
 
 pre-push:
   commands:

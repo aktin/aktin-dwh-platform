@@ -42,11 +42,11 @@ Three layers. Each layer trusts the one before it a little less.
 
 lefthook runs these after `lefthook install`:
 
-The shared hooks need `python3`, `gitleaks` and `actionlint` on PATH. A missing tool fails the commit.
+The shared hooks need `python3`, `gitleaks` and `actionlint` on PATH, the hooks of this repository need `hadolint` and `shellcheck`. A missing tool fails the commit.
 
 | When       | What runs                                                                                                                                                  | Blocks     |
 |------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
-| pre-commit | Spotless formats the staged Java files, Checkstyle lints them, the shared hooks scan for secrets with gitleaks, lint staged workflow files with actionlint and reject data files, large files and oversized commits | the commit |
+| pre-commit | Spotless formats the staged Java files, Checkstyle lints them, hadolint lints the staged Dockerfiles, shellcheck lints the staged shell scripts, the shared hooks scan for secrets with gitleaks, lint staged workflow files with actionlint and reject data files, large files and oversized commits | the commit |
 | commit-msg | Conventional Commit header check                                                                                                                           | the commit |
 | pre-push   | `./mvnw -B verify`: enforcer (JDK and Maven version), Spotless check, Checkstyle, tests, JaCoCo 80% line coverage                                         | the push   |
 
