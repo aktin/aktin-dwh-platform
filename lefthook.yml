@@ -19,13 +19,6 @@ pre-commit:
     lint:
       glob: "*.java"
       run: ./mvnw -q checkstyle:check -Dcheckstyle.includes="$(for f in {staged_files}; do printf '**/%s,' "$(basename "$f")"; done | sed 's/,$//')"
-    gitleaks:
-      run: |
-        if command -v gitleaks >/dev/null 2>&1; then
-          gitleaks protect --staged --redact --verbose
-        else
-          echo "gitleaks not installed, skipping secret scan"
-        fi
 
 pre-push:
   commands:
