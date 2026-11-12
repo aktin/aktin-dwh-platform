@@ -56,7 +56,7 @@ Hooks can be skipped with `--no-verify`, so nothing here is a guarantee. They ex
 
 | Check             | Workflow                                                                      | Required to merge                                                                                             |
 |-------------------|-------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| `verify / verify` | `ci.yml` calls `verify.yml`, the same `mvnw verify` as the pre-push hook      | yes                                                                                                           |
+| `verify / verify` | `ci.yml` calls the shared `verify-java.yml`, the same `mvnw verify` as the pre-push hook      | yes                                                                                                           |
 | `review`          | `dependency-review.yml`, fails on new dependencies with high or critical CVEs | yes                                                                                                           |
 | `analyze`         | `codeql.yml`, CodeQL code scanning                                            | not as a check, but the ruleset blocks the merge on CodeQL errors or security alerts of severity high or above |
 
