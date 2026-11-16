@@ -41,7 +41,7 @@ GitHub stores a signed attestation for every released jar. To check that a downl
 ```sh
 gh attestation verify aktin-dwh-platform-<version>.jar --repo aktin/aktin-dwh-platform --signer-repo aktin/aktin-github-scripts
 
-# Example command:
+# Example:
 # gh attestation verify aktin-dwh-platform-1.2.0.jar --repo aktin/aktin-dwh-platform --signer-repo aktin/aktin-github-scripts
 ```
 
@@ -49,7 +49,7 @@ gh attestation verify aktin-dwh-platform-<version>.jar --repo aktin/aktin-dwh-pl
 
 ## Checks and gates
 
-A change passes three layers: the git hooks on your machine, the checks on the pull request and the rules on the branch. Each layer trusts the one before it a little less. The first layer is described here. Everything that runs on GitHub is described in [.github/workflows/README.md](.github/workflows/README.md).
+A change passes three layers: the git hooks on your machine, the checks on the pull request and the rules on the branch. Anyone can skip the hooks, only organisation admins can bypass the checks and the rules. The hooks are described here. The checks on pull requests, the workflows, Dependabot and the rules on `main`, `dev` and release tags are described in [.github/workflows/README.md](.github/workflows/README.md).
 
 ### On your machine
 

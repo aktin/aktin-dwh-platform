@@ -4,6 +4,8 @@ What runs on GitHub for this repository and which rules protect `main`, `dev` an
 
 ## On a pull request to `dev` or `main`
 
+All checks start on their own. A pull request can be merged when the checks marked with yes passed and the rules under [Gates on `main` and `dev`](#gates-on-main-and-dev) are met.
+
 | Check                    | Workflow                                                                                                                    | Required to merge                                                                                                        |
 |--------------------------|-----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
 | `verify / verify`        | `verify.yml`, passes only when `verify / base / verify` and `verify / maven` passed                                         | yes                                                                                                                      |
