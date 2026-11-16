@@ -65,3 +65,7 @@ All hooks come from [aktin-github-scripts](https://github.com/aktin/aktin-github
 | pre-push   | `./mvnw -B verify`: enforcer (JDK and Maven version), Spotless check, Checkstyle, tests, JaCoCo 80% line coverage                                         | the push   |
 
 Hooks can be skipped with `--no-verify`, so nothing here is a guarantee. They exist for fast feedback.
+
+## License
+
+Apache-2.0. See [LICENSE](./LICENSE) and [NOTICE](./NOTICE).
