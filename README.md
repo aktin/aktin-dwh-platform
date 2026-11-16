@@ -53,6 +53,9 @@ A change passes three layers: the git hooks on your machine, the checks on the p
 
 ### On your machine
 
+> [!CAUTION]
+> Run `lefthook install` once after cloning, before your first commit. Without it no git hook runs on your machine.
+
 All hooks come from [aktin-github-scripts](https://github.com/aktin/aktin-github-scripts#git-hooks) through `lefthook.yml`. lefthook runs them after `lefthook install`. A missing tool fails the commit. actionlint, hadolint and shellcheck are only called when a workflow file, Dockerfile or shell script is staged.
 
 | When       | What runs                                                                                                                                                  | Blocks     |
