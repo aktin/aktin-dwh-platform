@@ -10,6 +10,8 @@ permissions:
 
 jobs:
   verify:
+    permissions:
+      contents: write
     uses: aktin/aktin-github-scripts/.github/workflows/verify-java.yml@main
 
   build:
