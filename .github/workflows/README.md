@@ -12,7 +12,7 @@ These checks appear on a pull request into `main` or `dev`.
 | `verify / maven` | `verify.yml`, runs `./mvnw -B verify` | through `verify / verify` |
 | `verify / base / verify` | `verify.yml`, lints Dockerfiles, shell scripts and workflow files | through `verify / verify` |
 | `review / review` | `scan-dependencies.yml`, fails on new dependencies with a known vulnerability of severity high or critical | yes |
-| `analyze / analyze` | `scan-codeql.yml`, CodeQL scan of the Java code | not as a check, but the ruleset on `main` blocks the merge on CodeQL errors or security alerts of severity high or above |
+| `analyze / analyze` | `scan-codeql.yml`, CodeQL scan of the Java code and the workflow files | not as a check, but the ruleset on `main` blocks the merge on CodeQL errors or security alerts of severity high or above |
 | `CodeQL` | no workflow file, GitHub code scanning posts it with the result of the CodeQL scan | not as a check, the same code scanning rule applies |
 
 ## Workflows
@@ -25,7 +25,7 @@ What each workflow does and when it runs. A pull request means one into `main` o
 | --- | --- | --- | --- | --- | --- |
 | `verify.yml` | yes | yes | | | Starts the shared `verify-java.yml`. It checks the Dockerfiles with hadolint, the shell scripts with shellcheck and the workflow files with actionlint, and runs `./mvnw -B verify` with Java 25. The run fails when hadolint reports an error, shellcheck a warning or worse, actionlint any finding, or the Maven build fails |
 | `scan-dependencies.yml` | yes | | | | Compares the dependencies before and after the pull request and fails when a newly added one has a known vulnerability of severity high or critical. On failure it writes the findings as a comment into the pull request |
-| `scan-codeql.yml` | yes | yes | Mondays 03:00 | | Scans the Java and Kotlin code with CodeQL, without building it, and reports the findings in the Security tab. Workflow files and shell scripts are not scanned |
+| `scan-codeql.yml` | yes | yes | Mondays 03:00 | | Scans the Java and Kotlin code with CodeQL, without building it, and reports the findings in the Security tab. It also scans the workflow files. Shell scripts are not scanned |
 | `scan-scorecard.yml` | | yes | Mondays 04:00 | | Rates the security practices of the repository, for example branch rules, pinned actions, token permissions and code review, publishes the score to OpenSSF and to the Security tab and feeds the badge in the root README. It changes nothing |
 | `release.yml` | | | | tag `v*` | Runs three jobs one after the other. `verify` repeats the checks of `verify.yml`. `build` starts the shared `build-java.yml`, which builds the jar of the tagged commit with the version taken from the tag, so the tag `v1.2.3` gives version `1.2.3`, generates the SBOM `sbom-java.cdx.json` and attests build provenance and the SBOM at GitHub. `publish` starts the shared `publish-release.yml`, which writes the release notes from the commit history with git-cliff and creates the GitHub Release with the jar and `sbom-java.cdx.json` attached. It fails when it finds no file to attach |
 
